@@ -1,0 +1,11 @@
+# Dependency directories
+node_modules/
+
+# IDEA's config .idea
+.idea
+
+# build / generate output
+dist
+
+#env
+.env.*
