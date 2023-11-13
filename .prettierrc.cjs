@@ -13,14 +13,14 @@ module.exports = {
     {
       files: '.prettierrc',
       options: {
-        parser: 'json'
-      }
+        parser: 'json',
+      },
     },
     {
       files: 'document.ejs',
       options: {
-        parser: 'html'
-      }
-    }
-  ]
+        parser: 'html',
+      },
+    },
+  ],
 };

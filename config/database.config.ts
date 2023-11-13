@@ -1,12 +1,11 @@
-import * as dotenv from "dotenv";
-dotenv.config();
+import 'dotenv/config';
 
 const databaseConfig = {
-    database: process.env.DATABASE || 'fullstack_test',
-    username: process.env.DB_USERNAME || 'snaplii_dev',
-    password: process.env.DB_PASSWORD || 'n0pa55w0rd',
-    host: process.env.DB_HOST || 'db-mysql-writer.nonprod.snaplii.com',
-    port: process.env.DB_PORT || 3306
-}
+  database: process.env.DATABASE,
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+};
 
-export default databaseConfig
+export default databaseConfig;
