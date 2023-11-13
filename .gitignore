@@ -5,7 +5,7 @@ node_modules/
 .idea
 
 # build / generate output
-dist
+dist/
 
 #env
 .env

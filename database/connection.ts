@@ -4,7 +4,7 @@ import databaseConfig from "../config/database.config.js";
 
 export const sequelize = new Sequelize(databaseConfig.database, databaseConfig.username, databaseConfig.password, {
     host: databaseConfig.host,
-    post: databaseConfig.port,
+    port: databaseConfig.port as number,
     dialect: 'mysql'
 });
 
@@ -17,4 +17,3 @@ export const connect = async ()=>{
         console.error('Unable to connect to the database:', error);
     }
 }
-

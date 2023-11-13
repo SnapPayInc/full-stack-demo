@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
 import { sequelize } from '../database/connection.js';
 
-const Todo = sequelize.define('Todo', {
+const Todo = sequelize.define('t_todos', {
     id: {
         type: DataTypes.BIGINT,
         primaryKey: true,
@@ -20,18 +20,11 @@ const Todo = sequelize.define('Todo', {
         type: DataTypes.STRING,
         allowNull: true,
     },
-    create_datetime:{
-        type: DataTypes.DATE,
-        allowNull: false,
-    },
-    update_datetime:{
-        type: DataTypes.DATE,
-        allowNull: false,
-    },
     finished:{
         type: DataTypes.BOOLEAN,
         allowNull: false,
+        defaultValue: false,
     }
 });
 
-export default Todo;
+export { Todo }
