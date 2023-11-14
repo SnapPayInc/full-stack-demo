@@ -9,7 +9,7 @@ export const sequelize = new Sequelize(
   databaseConfig.password,
   {
     host: databaseConfig.host,
-    port: databaseConfig.port,
+    port: Number.parseInt(databaseConfig.port),
     dialect: 'mysql',
   },
 );
