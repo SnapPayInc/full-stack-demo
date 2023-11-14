@@ -19,3 +19,17 @@ export const createTodo = async (req) => {
     todo_desc: req.body?.todoDesc,
   });
 };
+
+export const updateTodo = async (req) => {
+  return await Todo.update(
+    {
+      todo_name: req.body.todoName,
+      todo_desc: req.body?.todoDesc,
+    },
+    {
+      where: {
+        todo_no: req.body.todo_no,
+      },
+    },
+  );
+};

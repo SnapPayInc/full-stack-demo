@@ -1,5 +1,5 @@
 import express from 'express';
-import { getAllTodos, createTodo, getTodoByNo } from '../services/todoService.js';
+import { getAllTodos, createTodo, getTodoByNo, updateTodo } from '../services/todoService.js';
 
 const router = express.Router();
 
@@ -32,6 +32,18 @@ router.get('/:todo_no', async (req, res) => {
 router.post('/create', async (req, res) => {
   try {
     const result = await createTodo(req);
+    res.status(200).json({ data: result });
+  } catch (err) {
+    return res.status(500).json({
+      message: 'Error occurred in create todo',
+    });
+  }
+});
+
+//POST /todo/update/:todo_no
+router.post('/update', async (req, res) => {
+  try {
+    const result = await updateTodo(req);
     res.status(200).json({ data: result });
   } catch (err) {
     return res.status(500).json({
